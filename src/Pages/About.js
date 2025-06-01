@@ -44,7 +44,7 @@ const About = () => {
         viewport={{ once: true }}
       >
         <img
-          src="/Assets/AI.jpeg"
+          src="/Assets/AI (2).jpeg"
           alt="Luthen Analytics AI Overview"
           className="about-image"
         />
