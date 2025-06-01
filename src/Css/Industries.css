@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+/* ==============================
+   :root variables (combine all)
+============================== */
+:root {
+  --text-main: #030303;
+  --btn-dark: #123458;
+  --btn-accent: #123458;
+  --accent-font: #4ED7F1;
+  --heading: #123458;
+  --glass-bg: rgba(236, 238, 241, 0.08);
+  --glass-border: rgba(241, 239, 236, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* ==============================
+   Global styles for body, fonts
+============================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0f1a; /* use dark background consistent with industries */
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   Hero Section + Features (your earlier CSS)
+============================== */
+.home-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-text {
+  max-width: 900px;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  background: none;
+  box-shadow: none;
+}
+
+.hero-text h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  color: var(--heading);
+  animation: fadeSlideUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-text h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--heading);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.hero-text .highlight {
+  color: var(--accent-font);
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--text-main);
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  color: white;
+  padding: 0.9rem 2.6rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 210, 255, 0.5);
+  transition: all 0.4s ease;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #00d2ff;
+  color: var(--btn-dark);
+  box-shadow: none;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--btn-accent);
+}
+
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+  perspective: 1000px;
+}
+
+.glass-card {
+  width: 320px;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--glass-shadow);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  padding: 2rem;
+  animation: floatUpDown 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-main);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 35px rgba(18, 52, 88, 0.4), 0 0 50px rgba(78, 215, 241, 0.3);
+}
+
+.glass-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--btn-dark);
+}
+
+.glass-card h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: var(--heading);
+  display: block;
+  margin: 0.3rem auto 0;
+  border-radius: 2px;
+}
+
+.glass-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.glass-card li {
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.testimonial {
+  font-style: italic;
+  color: var(--btn-dark);
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Industries Section CSS
+============================== */
+
+.industries-container {
+  padding: 5rem 6vw;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0f1a;
+  color: white;
+  overflow-x: hidden;
+}
+
+.industries-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #00d2ff, #3a47d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.industry-tile-tilt {
+  border-radius: 20px;
+}
+
+.industry-tile {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 210, 255, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.industry-tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 210, 255, 0.28);
+}
+
+.industry-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.industry-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10, 20, 30, 0.85), transparent);
+  color: #cdeaff;
+  z-index: 2;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.industry-tile:hover .industry-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.industry-tile h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.industry-tile p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #9ddfff;
+}
+
+.industries-cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.demo-button {
+  padding: 1rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  border: none;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.demo-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.9);
+}
+
+/* ==============================
+   Responsive adjustments (combine all)
+============================== */
+
+/* Small devices - phones (portrait) */
+@media screen and (max-width: 480px) and (max-aspect-ratio: 9/16) {
+  .home-container{
+    width: 45%;   
+    position: relative;
+    z-index: 1; 
+  }
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .glass-card {
+    width: 35%;
+    padding: 1.5rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  /* Industries adjustments */
+  .industries-heading {
+    font-size: 2rem;
+  }
+
+  .industry-tile {
+    height: 220px;
+  }
+
+  .industry-overlay {
+    padding: 1rem;
+  }
+
+  .industry-tile h3 {
+    font-size: 1.2rem;
+  }
+
+  .industry-tile p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Phones landscape or devices with wider aspect ratios */
+@media screen and (max-width: 768px) and (min-aspect-ratio: 9/16) {
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+  .glass-card {
+    width: 85%;
+  }
+}
+
+/* Tablets (portrait) */
+@media screen and (min-width: 481px) and (max-width: 1024px) and (max-aspect-ratio: 3/4) {
+  .hero-text h2 {
+    font-size: 2.6rem;
+  }
+  .glass-card {
+    width: 75%;
+  }
+}
+
+/* Tablets and small desktops (wider screens) */
+@media screen and (min-width: 769px) and (max-width: 1200px) and (min-aspect-ratio: 4/3) {
+  .hero-text h2 {
+    font-size: 3rem;
+  }
+  .glass-card {
+    width: 45%;
+  }
+}
+
+/* Large desktops (wider aspect ratios) */
+@media screen and (min-width: 1201px) and (min-aspect-ratio: 16/9) {
+  .hero-text h2 {
+    font-size: 3.2rem;
+  }
+  .glass-card {
+    width: 320px;
+  }
+}
+
+/* Ultra wide screens */
+@media screen and (min-width: 1600px) and (min-aspect-ratio: 21/9) {
+  .hero-text h2 {
+    font-size: 3.6rem;
+  }
+  .glass-card {
+    width: 350px;
+  }
+}

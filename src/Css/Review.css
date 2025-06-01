@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+.review-page {
+  padding: 4rem 2rem;
+  background: var(--glass-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Reuse glass-card style from your main CSS */
+.review-card {
+  width: 320px;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--glass-shadow);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  padding: 2rem;
+  animation: floatUpDown 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-main);
+}
+
+.review-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 35px rgba(18, 52, 88, 0.4), 0 0 50px rgba(78, 215, 241, 0.3);
+}
+
+.review-icon {
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.review-footer {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1rem;
+}
+
+.review-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--btn-dark);
+}
+
+.review-title {
+  font-size: 0.9rem;
+  color: var(--heading);
+}
+
+/* Reuse animations and responsiveness */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review-card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}

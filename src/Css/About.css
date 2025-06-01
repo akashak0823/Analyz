@@ -1,0 +1,122 @@
+/* About Section Layout */
+.about-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: rgba(15, 23, 42, 0.8); /* Glassy dark */
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  max-width: 1300px;
+  margin: auto;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Left Content Section */
+.about-left {
+  flex: 1;
+  min-width: 300px;
+  color: #e2e8f0;
+}
+
+.quote-icon-large {
+  font-size: 3rem;
+  color: #0ea5e9;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  max-width: 600px;
+}
+
+/* CTA Button */
+.discover-btn {
+  padding: 0.9rem 2.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+}
+
+.discover-btn:hover {
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(14, 165, 233, 0.4);
+}
+
+/* Right Image Section Styled as Card */
+.about-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.25);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 36px rgba(14, 165, 233, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-image {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+  }
+
+  .discover-btn {
+    margin-top: 1rem;
+    width: fit-content;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,155 @@
+.gsap-industries-container {
+  padding: 5rem 6vw;
+  background: #0a0f1a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.gsap-industries-heading {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #00d2ff, #3a47d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.gsap-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 5rem;
+  perspective: 1500px; /* enable 3D perspective */
+}
+
+/* Card styling */
+.gsap-industry-card {
+  position: relative;
+  height: 380px; /* Balanced size for content */
+  width: 400px;
+  gap: 2.5rem;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 24px rgba(0, 210, 255, 0.25);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.gsap-industry-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 210, 255, 0.4);
+}
+
+/* Overlay content */
+.gsap-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem 1.2rem;
+  background: linear-gradient(to top, rgba(0, 10, 30, 0.85), rgba(0, 10, 30, 0.15));
+  color: #cdeaff;
+  border-radius: 0 0 20px 20px;
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: inset 0 -4px 12px rgba(0, 210, 255, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.gsap-overlay:hover {
+  background: linear-gradient(to top, rgba(0, 20, 60, 0.95), rgba(0, 20, 60, 0.3));
+  box-shadow: inset 0 -6px 20px rgba(0, 210, 255, 0.5);
+}
+
+.gsap-overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00d2ff;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+  letter-spacing: 0.05em;
+  position: relative;
+  line-height: 1.2;
+  user-select: none;
+}
+
+.gsap-overlay p {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #9ddfff;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+/* CTA */
+.gsap-industries-cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.demo-button {
+  padding: 1rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  border: none;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+  transition: all 0.4s ease;
+}
+
+.demo-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.9);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .gsap-industries-heading {
+    font-size: 2.2rem;
+  }
+
+  .gsap-industry-card {
+    height: 320px;
+  }
+
+  .gsap-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .gsap-overlay p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gsap-industries-heading {
+    font-size: 1.8rem;
+  }
+
+  .gsap-industry-card {
+    height: 280px;
+  }
+
+  .gsap-overlay {
+    padding: 1rem;
+  }
+
+  .gsap-overlay h3 {
+    font-size: 1.15rem;
+  }
+
+  .gsap-overlay p {
+    font-size: 0.85rem;
+  }
+}
