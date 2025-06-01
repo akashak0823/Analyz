@@ -153,3 +153,114 @@
     font-size: 0.85rem;
   }
 }
+/* ===== Responsive Styles for All Devices ===== */
+
+/* Extra Small Devices (Phones - Portrait, <480px) */
+@media (max-width: 480px) {
+  .gsap-industries-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .gsap-industry-card {
+    width: 90vw;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .gsap-overlay h3 {
+    font-size: 1.1rem;
+  }
+
+  .gsap-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .gsap-industries-heading {
+    font-size: 1.6rem;
+  }
+
+  .demo-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+/* Small Devices (Phones Landscape and Large Phones, 481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .gsap-industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+  }
+
+  .gsap-industry-card {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .gsap-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .gsap-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .gsap-industries-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Medium Devices (Tablets - 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gsap-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  .gsap-industry-card {
+    width: 100%;
+    height: 340px;
+    margin: 0 auto;
+  }
+
+  .gsap-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .gsap-overlay p {
+    font-size: 1rem;
+  }
+
+  .gsap-industries-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Large Devices (Desktops - 1025px and above) */
+@media (min-width: 1025px) {
+  .gsap-industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 5rem;
+  }
+
+  .gsap-industry-card {
+    width: 100%;
+    max-width: 400px;
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  .gsap-overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  .gsap-overlay p {
+    font-size: 1rem;
+  }
+
+  .gsap-industries-heading {
+    font-size: 2.8rem;
+  }
+}
