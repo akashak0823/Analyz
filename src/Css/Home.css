@@ -231,81 +231,57 @@
 /* Responsive Media Queries */
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
-  .home-container {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    z-index: 2;
+    position: relative;
     width: 100%;
-    padding: 0 1rem;
+  }
+
+  .btn {
+    width: 90%;
+    max-width: 320px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    z-index: 1;
+    position: relative;
+  }
+
+  .glass-card {
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .hero-section {
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .hero-text {
-    max-width: 100% !important;
-    padding: 1.5rem 1rem !important;
-    text-align: center !important;
-    align-items: center;
-  }
-
-  .hero-text h2,
-  .hero-text p {
-    text-align: center !important;
-  }
-
-  .typing-effect {
-    white-space: normal !important;
-    text-align: center;
-    margin: 0 auto;
-    border-right: none; /* Optional: disable typing cursor for small screen */
-  }
-
-  .features-section {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
-  }
-
-  .glass-card {
-    width: 90% !important;
-    margin-bottom: 1.5rem;
-    text-align: center !important;
-    align-items: center;
+    box-sizing: border-box;
+    transform: none !important;
   }
 
   .glass-card h3,
   .glass-card ul,
+  .glass-card li,
+  .glass-card .testimonial {
+    text-align: center;
+  }
+
   .glass-card li {
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  .cta-buttons {
-    flex-direction: column !important;
-    gap: 1rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-
-/* Phones landscape and small tablets */
-@media screen and (max-width: 768px) and (min-aspect-ratio: 9/16) {
-  .hero-text h2 {
-    font-size: 2.2rem;
-  }
-  .glass-card {
-    width: 85%;
+    justify-content: center;
   }
 }
 
