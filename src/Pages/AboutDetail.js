@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBullseye, FaRocket, FaLightbulb, FaQuoteLeft } from 'react-icons/fa';
+import { FaBullseye, FaRocket, FaLightbulb } from 'react-icons/fa';
 import '../Css/AboutDetails.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,13 +24,6 @@ const cardData = [
     text: `Accurate AI models\nFull data ownership\nScalable & minimal-disruption implementation`,
   },
 ];
-
-const founderNote = {
-  icon: <FaQuoteLeft className="quote-icon" />,
-  image: '/Assets/Ai.jpeg',
-  text: `“I believe the future of business lies in how well we\nread the data today. Luthen is my answer to that future.”`,
-  author: '~ Fayaz',
-};
 
 const AboutDetail = () => {
   const navigate = useNavigate();
@@ -73,27 +66,6 @@ const AboutDetail = () => {
               </div>
             </motion.div>
           ))}
-
-          <motion.div
-            className="about-card quote-card"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: cardData.length * 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="card-content">
-              <img src={founderNote.image} alt="Founder" className="card-image" />
-              <div className="card-text-area">
-                {founderNote.icon}
-                <blockquote className="card-text">
-                  {founderNote.text.split('\n').map((line, index) => (
-                    <div key={index}>{line}</div>
-                  ))}
-                </blockquote>
-                <cite className="card-title">{founderNote.author}</cite>
-              </div>
-            </div>
-          </motion.div>
         </div>
 
         <motion.button
